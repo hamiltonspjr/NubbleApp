@@ -6,7 +6,7 @@ import {Text} from './src/components/Text/Text';
 function App(): JSX.Element {
   return (
     <SafeAreaView>
-      <Text preset="headingLarge" style={{color: 'blue'}}>
+      <Text bold preset="headingLarge" style={{color: 'blue'}}>
         Coffstack
       </Text>
     </SafeAreaView>
