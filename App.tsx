@@ -4,7 +4,10 @@ import {SafeAreaView} from 'react-native';
 import {Text} from './src/components/Text/Text';
 import {ThemeProvider} from '@shopify/restyle';
 import {theme} from './src/theme/theme';
-import {Button} from './src/components/Button/Button';
+
+import {EyeOffIcon} from './src/assets/icons/EyeOffIcon';
+import {EyeOnIcon} from './src/assets/icons/EyeOnIcon';
+import {Icon} from './src/components/Icon/Icon';
 
 function App(): JSX.Element {
   return (
@@ -13,9 +16,9 @@ function App(): JSX.Element {
         <Text bold preset="headingLarge">
           Coffstack
         </Text>
-        <Button disabled preset="primary" title="entrar" />
-        <Button disabled loading preset="outline" title="loading0" />
-        <Button disabled preset="outline" title="entrar" marginTop="s10" />
+        <EyeOffIcon />
+        <EyeOnIcon />
+        <Icon name="eyeOff" color="error" size={90} />
       </SafeAreaView>
     </ThemeProvider>
   );
