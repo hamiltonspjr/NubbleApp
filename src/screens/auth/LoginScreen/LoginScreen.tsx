@@ -1,13 +1,14 @@
 import React from 'react';
-import {SafeAreaView, View} from 'react-native';
+import {View} from 'react-native';
 import {Icon} from '../../../components/Icon/Icon';
 import {Text} from '../../../components/Text/Text';
 import {TextInput} from '../../../components/TextInput/TextInput';
 import {Button} from '../../../components/Button/Button';
+import {Screen} from '../../../components/Screen/Screen';
 
 export function LoginScreen() {
   return (
-    <SafeAreaView>
+    <Screen>
       <View style={{paddingHorizontal: 24}}>
         <Text marginBottom="s8" preset="headingLarge">
           Olá!
@@ -35,6 +36,6 @@ export function LoginScreen() {
         <Button mt="s48" title="Entrar" />
         <Button preset="outline" mt="s12" title="Criar uma conta" />
       </View>
-    </SafeAreaView>
+    </Screen>
   );
 }
