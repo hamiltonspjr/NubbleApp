@@ -10,5 +10,6 @@ export function useAppSafeArea() {
     // no caso do ios será retornado o top e no
     // android o valor de spacing.s20
     top: Math.max(top, spacing.s20),
+    bottom: Math.max(top, spacing.s20),
   };
 }
