@@ -1,10 +1,10 @@
 import React from 'react';
 import {View} from 'react-native';
-import {Icon} from '../../../components/Icon/Icon';
 import {Text} from '../../../components/Text/Text';
 import {TextInput} from '../../../components/TextInput/TextInput';
 import {Button} from '../../../components/Button/Button';
 import {Screen} from '../../../components/Screen/Screen';
+import {PasswordInput} from '../../../components/PasswordInput/PasswordInput';
 
 export function LoginScreen() {
   return (
@@ -23,11 +23,10 @@ export function LoginScreen() {
           boxProps={{mb: 's10'}}
         />
 
-        <TextInput
+        <PasswordInput
           label="Senha"
           placeholder="Digite sua senha"
           boxProps={{mb: 's10'}}
-          RightComponent={<Icon color="gray2" name="eyeOn" />}
         />
 
         <Text color="primary" preset="paragraphSmall" bold>
