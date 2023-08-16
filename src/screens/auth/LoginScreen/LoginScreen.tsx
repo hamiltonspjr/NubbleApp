@@ -8,7 +8,7 @@ import {PasswordInput} from '../../../components/PasswordInput/PasswordInput';
 
 export function LoginScreen() {
   return (
-    <Screen>
+    <Screen scrollable>
       <View style={{paddingHorizontal: 24}}>
         <Text marginBottom="s8" preset="headingLarge">
           Olá!
