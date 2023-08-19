@@ -1,7 +1,7 @@
 import React from 'react';
 import {Screen} from '../../../components/Screen/Screen';
 import {Text} from '../../../components/Text/Text';
-
+import {zodResolver} from '@hookform/resolvers/zod';
 import {Button} from '../../../components/Button/Button';
 
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
@@ -10,18 +10,13 @@ import {useResetNavigationSuccess} from '../../../hooks/useResetNavigationSucces
 import {useForm} from 'react-hook-form';
 import {FormTextInput} from '../../../components/Form/FormTextInput';
 import {FormPasswordInput} from '../../../components/Form/FormPasswordInput';
+import {signUpSchema, SignUpSchemaType} from './signUpSchema';
 
 type ScreenProps = NativeStackScreenProps<RootStackParamList, 'SignUpScreen'>;
 
-type SignUpFormType = {
-  username: string;
-  fullName: string;
-  email: string;
-  password: string;
-};
-
 export function SignUpScreen({navigation}: ScreenProps) {
-  const {control, formState, handleSubmit} = useForm<SignUpFormType>({
+  const {control, formState, handleSubmit} = useForm<SignUpSchemaType>({
+    resolver: zodResolver(signUpSchema),
     defaultValues: {
       username: '',
       fullName: '',
@@ -32,7 +27,7 @@ export function SignUpScreen({navigation}: ScreenProps) {
   });
 
   const {reset} = useResetNavigationSuccess();
-  function submitForm(formValues: SignUpFormType) {
+  function submitForm(formValues: SignUpSchemaType) {
     // reset({
     //   title: 'Sua conta foi criada com sucesso!',
     //   description: 'Agora é só fazer login na nossa plataforma',
