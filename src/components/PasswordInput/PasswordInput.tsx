@@ -1,7 +1,6 @@
 import React from 'react';
 
-import {Icon} from '../Icon/Icon';
-import {TextInput, TextInputProps} from '../TextInput/TextInput';
+import {TextInput, TextInputProps, Icon} from '@components';
 
 /* copia a interface para esse type mas a função
 Omit permite retirar alguma propriedade que possui na anterior e não será utilizada por essa interface

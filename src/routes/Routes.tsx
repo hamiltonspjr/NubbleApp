@@ -1,17 +1,19 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {LoginScreen} from '../screens/auth/LoginScreen/LoginScreen';
-import {SignUpScreen} from '../screens/auth/SignUpScreen/SignUpScreen';
-import {SuccessScreen} from '../screens/auth/SuccessScreen/SuccessScreen';
-import {IconProps} from '../components/Icon/Icon';
-import {ForgotPasswordScreen} from '../screens/auth/ForgotPasswordScreen/ForgotPasswordScreen';
+import {
+  LoginScreen,
+  SignUpScreen,
+  SuccessScreen,
+  ForgotPasswordScreen,
+} from '@screens';
+
+import {IconProps} from '@components';
 
 // definindo os parâmetros das telas
 export type RootStackParamList = {
   LoginScreen: undefined;
   SignUpScreen: undefined;
-  // SucessScreen: icon, title, description
   SuccessScreen: {
     title: string;
     description: string;
