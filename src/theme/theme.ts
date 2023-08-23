@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import {createTheme} from '@shopify/restyle';
 
 export const palette = {
