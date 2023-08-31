@@ -10,14 +10,14 @@ import {
   FormTextInput,
   FormPasswordInput,
 } from '@components';
-import {useResetNavigationSuccess} from '@hooks';
+//import {useResetNavigationSuccess} from '@hooks';
 import {AuthScreenProps} from '@routes';
 
 import {signUpSchema, SignUpSchemaType} from './signUpSchema';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function SignUpScreen({navigation}: AuthScreenProps<'SignUpScreen'>) {
-  const {control, formState, handleSubmit} = useForm<SignUpSchemaType>({
+  const {control, formState} = useForm<SignUpSchemaType>({
     resolver: zodResolver(signUpSchema),
     defaultValues: {
       username: '',
@@ -75,7 +75,7 @@ export function SignUpScreen({navigation}: AuthScreenProps<'SignUpScreen'>) {
       />
       <Button
         disabled={!formState.isValid}
-        onPress={handleSubmit(submitForm)}
+        //onPress={handleSubmit(submitForm)}
         title="Criar uma conta"
       />
     </Screen>

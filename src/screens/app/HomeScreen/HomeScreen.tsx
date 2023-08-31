@@ -2,9 +2,10 @@ import React from 'react';
 
 import {Post, postService} from '@domain';
 
-import {Button, Screen, Text} from '@components';
+import {Screen, Text} from '@components';
 import {AppTabScreenProps} from '@routes';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function HomeScreen({navigation}: AppTabScreenProps<'HomeScreen'>) {
   const [postList, setPostList] = React.useState<Post[]>([]);
 

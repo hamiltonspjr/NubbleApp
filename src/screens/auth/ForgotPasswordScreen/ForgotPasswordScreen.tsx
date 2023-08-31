@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {zodResolver} from '@hookform/resolvers/zod';
 import {useForm} from 'react-hook-form';
 
@@ -23,7 +25,7 @@ export function ForgotPasswordScreen({
     mode: 'onChange',
   });
 
-  function submitForm({email}: ForgotPasswordSchemaType) {
+  function submitForm() {
     // TODO: implementar
     reset({
       title: 'Enviamos as instruções para seu e-mail',
