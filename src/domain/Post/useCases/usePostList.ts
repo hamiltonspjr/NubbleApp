@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import {postService} from '../postService';
 import {Post} from '../postTypes';
@@ -7,16 +7,20 @@ export function usePostList() {
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<boolean | null>(null);
   const [postList, setPostList] = React.useState<Post[]>([]);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = React.useState(1);
+  const [hasNextPage, setHasNextPage] = React.useState(true);
 
   async function fetchInitialData() {
     try {
       setError(null);
       setLoading(true);
-      const list = await postService.getList(1);
-      setPostList(list);
-      //TODO: validar se tem mais páginas
-      setPage(2);
+      const {data, meta} = await postService.getList(1);
+      setPostList(data);
+      if (meta.hasNextPage) {
+        setPage(2);
+      } else {
+        setHasNextPage(false);
+      }
     } catch (er) {
       setError(true);
     } finally {
@@ -25,14 +29,18 @@ export function usePostList() {
   }
 
   async function fetchNextPage() {
-    if (loading) {
+    if (loading || !hasNextPage) {
       return;
     }
     try {
       setLoading(true);
-      const list = await postService.getList(page);
-      setPostList(prev => [...prev, ...list]);
-      setPage(prev => prev + 1);
+      const {data, meta} = await postService.getList(page);
+      setPostList(prev => [...prev, ...data]);
+      if (meta.hasNextPage) {
+        setPage(prev => prev + 1);
+      } else {
+        setHasNextPage(false);
+      }
     } catch (er) {
       setError(true);
     } finally {
