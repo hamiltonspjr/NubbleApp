@@ -18,7 +18,13 @@ import {HomeHeader} from './components/HomeHeader';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function HomeScreen({navigation}: AppTabScreenProps<'HomeScreen'>) {
-  const {postList, error, loading, refresh, fetchNextPage} = usePostList();
+  const {
+    list: postList,
+    error,
+    loading,
+    refresh,
+    fetchNextPage,
+  } = usePostList();
 
   function renderItem({item}: ListRenderItemInfo<Post>) {
     return <PostItem post={item} />;

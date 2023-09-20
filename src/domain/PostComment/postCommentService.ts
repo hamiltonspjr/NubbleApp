@@ -21,6 +21,6 @@ async function getList(
   };
 }
 
-export const postCommentServiceService = {
+export const postCommentService = {
   getList,
 };
