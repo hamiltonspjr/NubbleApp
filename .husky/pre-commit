@@ -2,3 +2,6 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npm run lint
+
+# verificar erro de typescript
+npx tsc --noEmit
