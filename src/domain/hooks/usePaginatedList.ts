@@ -1,16 +1,14 @@
-import React from 'react';
+import {useEffect, useState} from 'react';
 
 import {Page} from '@types';
-
 export function usePaginatedList<Data>(
   getList: (page: number) => Promise<Page<Data>>,
 ) {
-  const [list, setList] = React.useState<Data[]>([]);
-  const [loading, setLoading] = React.useState(true);
-  const [error, setError] = React.useState<boolean | null>(null);
-  const [page, setPage] = React.useState(1);
-  const [hasNextPage, setHasNextPage] = React.useState(true);
-
+  const [list, setList] = useState<Data[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<boolean | null>(null);
+  const [page, setPage] = useState(1);
+  const [hasNextPage, setHasNextPage] = useState(true);
   async function fetchInitialData() {
     try {
       setError(null);
@@ -28,7 +26,6 @@ export function usePaginatedList<Data>(
       setLoading(false);
     }
   }
-
   async function fetchNextPage() {
     if (loading || !hasNextPage) {
       return;
@@ -48,17 +45,16 @@ export function usePaginatedList<Data>(
       setLoading(false);
     }
   }
-
-  React.useEffect(() => {
+  useEffect(() => {
     fetchInitialData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
   return {
     list,
     error,
     loading,
     refresh: fetchInitialData,
     fetchNextPage,
+    hasNextPage,
   };
 }
