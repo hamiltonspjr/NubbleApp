@@ -9,7 +9,7 @@ function toMetaDataPage(meta: MetaDataPageAPI): MetaDataPage {
     currentPage: meta.current_page,
     lastPage: meta.last_page,
     firstPage: meta.first_page,
-    hasNextPage: !!meta.first_page_url,
+    hasNextPage: !!meta.next_page_url,
     hasPreviousPage: !!meta.previous_page_url,
   };
 }
