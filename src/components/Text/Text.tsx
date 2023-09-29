@@ -34,6 +34,46 @@ export function Text({
   );
 }
 
+// interface de variação possíveis no texto
+type TextVariants =
+  | 'headingLarge'
+  | 'headingMedium'
+  | 'headingSmall'
+  | 'paragraphLarge'
+  | 'paragraphMedium'
+  | 'paragraphSmall'
+  | 'paragraphCaption'
+  | 'paragraphCaptionSmall';
+
+// com o Record, a primeira interface vai definir a chave do objeto e a segunda o valor. Com isso, estamos dizendo que as chaves desse objeto só podem ser as que foram definidas no TextVariants e o é do tipo estilo de texto nesse caso.
+export const $fontSizes: Record<TextVariants, TextStyle> = {
+  headingLarge: {fontSize: 32, lineHeight: 38.4},
+  headingMedium: {fontSize: 22, lineHeight: 26.4},
+  headingSmall: {fontSize: 18, lineHeight: 23.4},
+
+  paragraphLarge: {fontSize: 18, lineHeight: 25.2},
+  paragraphMedium: {fontSize: 16, lineHeight: 22.4},
+  paragraphSmall: {fontSize: 14, lineHeight: 19.6},
+
+  paragraphCaption: {fontSize: 12, lineHeight: 16.8},
+  paragraphCaptionSmall: {fontSize: 10, lineHeight: 14},
+};
+
+// definição das fontes possíveis de serem utilizadas no projeto
+export const $fontFamily = {
+  black: 'Satoshi-Black',
+  blackItalic: 'Satoshi-BlackItalic',
+  bold: 'Satoshi-Bold',
+  boldItalic: 'Satoshi-BoldItalic',
+  italic: 'Satoshi-Italic',
+  light: 'Satoshi-Light',
+  lightItalic: 'Satoshi-LightItalic',
+  medium: 'Satoshi-Medium',
+  mediumItalic: 'Satoshi-MediumItalic',
+  regular: 'Sato',
+};
+
+// define qual é o fontFamily com base nas propriedades passadas
 function getFontFamily(
   preset: TextVariants,
   bold?: boolean,
@@ -63,39 +103,3 @@ function getFontFamily(
       return $fontFamily.regular;
   }
 }
-
-type TextVariants =
-  | 'headingLarge'
-  | 'headingMedium'
-  | 'headingSmall'
-  | 'paragraphLarge'
-  | 'paragraphMedium'
-  | 'paragraphSmall'
-  | 'paragraphCaption'
-  | 'paragraphCaptionSmall';
-
-export const $fontSizes: Record<TextVariants, TextStyle> = {
-  headingLarge: {fontSize: 32, lineHeight: 38.4},
-  headingMedium: {fontSize: 22, lineHeight: 26.4},
-  headingSmall: {fontSize: 18, lineHeight: 23.4},
-
-  paragraphLarge: {fontSize: 18, lineHeight: 25.2},
-  paragraphMedium: {fontSize: 16, lineHeight: 22.4},
-  paragraphSmall: {fontSize: 14, lineHeight: 19.6},
-
-  paragraphCaption: {fontSize: 12, lineHeight: 16.8},
-  paragraphCaptionSmall: {fontSize: 10, lineHeight: 14},
-};
-
-export const $fontFamily = {
-  black: 'Satoshi-Black',
-  blackItalic: 'Satoshi-BlackItalic',
-  bold: 'Satoshi-Bold',
-  boldItalic: 'Satoshi-BoldItalic',
-  italic: 'Satoshi-Italic',
-  light: 'Satoshi-Light',
-  lightItalic: 'Satoshi-LightItalic',
-  medium: 'Satoshi-Medium',
-  mediumItalic: 'Satoshi-MediumItalic',
-  regular: 'Sato',
-};
