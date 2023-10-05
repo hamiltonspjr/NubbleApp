@@ -5,7 +5,7 @@ import {Toast, ToastService} from '../toastTypes';
 export const ToastContext = createContext<ToastService>({
   toast: null,
   showToast: () => {},
-  hidenToast: () => {},
+  hideToast: () => {},
 });
 
 export function ToastProvider({children}: React.PropsWithChildren<{}>) {
@@ -15,12 +15,12 @@ export function ToastProvider({children}: React.PropsWithChildren<{}>) {
     setToast(_toast);
   }
 
-  function hidenToast() {
+  function hideToast() {
     setToast(null);
   }
 
   return (
-    <ToastContext.Provider value={{toast, showToast, hidenToast}}>
+    <ToastContext.Provider value={{toast, showToast, hideToast}}>
       {children}
     </ToastContext.Provider>
   );
