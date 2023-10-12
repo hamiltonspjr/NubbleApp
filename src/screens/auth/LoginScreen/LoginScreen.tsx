@@ -1,7 +1,9 @@
 import React from 'react';
 import {View} from 'react-native';
 
+import {useAuthSignIn} from '@domain';
 import {zodResolver} from '@hookform/resolvers/zod';
+import {useToastService} from '@services';
 import {useForm} from 'react-hook-form';
 
 import {
@@ -25,9 +27,13 @@ export function LoginScreen({navigation}: AuthScreenProps<'LoginScreen'>) {
     mode: 'onChange',
   });
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  function submitForm(formValues: LoginSchemaType) {
-    //
+  const {showToast} = useToastService();
+  const {isLoading, signIn} = useAuthSignIn({
+    onError: message => showToast({message, type: 'error'}),
+  });
+
+  function submitForm({email, password}: LoginSchemaType) {
+    signIn({email, password});
   }
 
   function navigateToSignUpScreen() {
@@ -71,6 +77,7 @@ export function LoginScreen({navigation}: AuthScreenProps<'LoginScreen'>) {
           Esqueci minha senha
         </Text>
         <Button
+          loading={isLoading}
           mt="s48"
           title="Entrar"
           onPress={handleSubmit(submitForm)}
