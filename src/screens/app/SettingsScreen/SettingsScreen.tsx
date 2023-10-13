@@ -1,13 +1,16 @@
 import React from 'react';
 
-import {Screen, Text} from '@components';
+import {useAuthSignOut} from '@domain';
+
+import {Button, Screen, Text} from '@components';
 import {AppScreenProps} from '@routes';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function SettingsScreen(props: AppScreenProps<'SettingsScreen'>) {
+export function SettingsScreen({}: AppScreenProps<'SettingsScreen'>) {
+  const {signOut, isLoading} = useAuthSignOut();
   return (
-    <Screen canGoBack>
+    <Screen canGoBack title="Configurações">
       <Text preset="headingSmall">Setting Screen</Text>
+      <Button title="Sair da conta" onPress={signOut} loading={isLoading} />
     </Screen>
   );
 }
