@@ -29,7 +29,7 @@ async function signUp(data: SignUpDataAPI): Promise<UserAPI> {
   return response.data;
 }
 
-async function isUserNameAvailable(params: {
+async function isUsernameAvailable(params: {
   username: string;
 }): Promise<FieldIsAvailableAPI> {
   const response = await api.get<FieldIsAvailableAPI>('validate-username', {
@@ -53,6 +53,6 @@ export const authApi = {
   signIn,
   signOut,
   signUp,
-  isUserNameAvailable,
+  isUsernameAvailable,
   isEmailAvailable,
 };
