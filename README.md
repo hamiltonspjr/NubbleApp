@@ -1,6 +1,6 @@
 # Nubble App
 
-Nubble App é um aplicativo de rede social desenvolvido com React Native, TypeScript, React Native CLI e @shopify/restyle. O objetivo é fornecer aos usuários uma plataforma envolvente para conectar e compartilhar suas experiências por meio de uma interface de usuário familiar e intuitiva.
+Nubble App é um projeto desenvolvido no curso da Coffstack que consiste em aplicativo de rede social desenvolvido com React Native, TypeScript, React Native CLI e @shopify/restyle. O objetivo é fornecer aos usuários uma plataforma envolvente para conectar e compartilhar suas experiências por meio de uma interface de usuário familiar e intuitiva.
 
 ## Funcionalidades
 
@@ -34,8 +34,8 @@ O aplicativo utiliza as seguintes tecnologias:
 - React Hook Form
 - Axios
 
-## Autor
+## Contato
 
-Hamilton de Souza
+Entre em contato comigo através do linkedin clicando no botão abaixo:
 <br>
 <a href="https://www.linkedin.com/in/hamilton-de-souza/" target="_blank"><img src="https://img.shields.io/badge/Linkedin-blue?style=for-the-badge&logo=Linkedin"></a>
