@@ -1,79 +1,41 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Nubble App
 
-# Getting Started
+Nubble App é um aplicativo de rede social desenvolvido com React Native, TypeScript, React Native CLI e @shopify/restyle. O objetivo é fornecer aos usuários uma plataforma envolvente para conectar e compartilhar suas experiências por meio de uma interface de usuário familiar e intuitiva.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Funcionalidades
 
-## Step 1: Start the Metro Server
+O Nubble App oferece as seguintes funcionalidades:
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+1. **Autenticação do Usuário**: Os usuários podem criar uma conta, fazer login e sair com segurança. Isso garante que apenas usuários autorizados possam acessar as funcionalidades do aplicativo.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+2. **Personalização de perfil**: Os usuários podem personalizar seus perfis adicionando uma foto de perfil, biografia e outros detalhes relevantes. Este recurso permite que os usuários expressem sua identidade e interesses.
 
-```bash
-# using npm
-npm start
+3. **Feed de notícias**: O aplicativo fornece um feed de notícias onde os usuários podem descobrir e navegar pelas postagens compartilhadas por outros usuários. O feed de notícias mantém os usuários atualizados com as atividades mais recentes das pessoas que eles seguem.
 
-# OR using Yarn
-yarn start
-```
+## App Screenshots
 
-## Step 2: Start your Application
+<img src="./src/screenShots/screenshotLoginScreen.png" width="320px" height="608px">
+<img src="./src/screenShots/screenshotSignInScreen.png" width="320px" height="608px">
+<img src="./src/screenShots/screenshotHomeScreen.png" width="320px" height="608px">
+<img src="./src/screenShots/screenshotPostCommentScreen.png" width="320px" height="608px">
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+## Tecnologias
 
-### For Android
+O aplicativo utiliza as seguintes tecnologias:
 
-```bash
-# using npm
-npm run android
+- React Native
+- React Native CLI
+- Typescript
+- @shopify/restyle
+- Async-storage
+- Zustand
+- React Query
+- zod
+- React Hook Form
+- Axios
 
-# OR using Yarn
-yarn android
-```
+## Autor
 
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Hamilton de Souza
+<br>
+<a href="https://www.linkedin.com/in/hamilton-de-souza/" target="_blank"><img src="https://img.shields.io/badge/Linkedin-blue?style=for-the-badge&logo=Linkedin"></a>

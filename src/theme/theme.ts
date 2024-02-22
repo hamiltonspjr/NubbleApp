@@ -68,6 +68,7 @@ export const $shadowProps: ViewStyle = {
   shadowOffset: {width: 0, height: -3},
 };
 
-// extraindo o type diretamente do objeto
+// extraindo o type do theme diretamente do objeto completo
 export type Theme = typeof theme;
+// extraindo o type para ThemeColors sendo ele as chaves que Theme['colors'] possui
 export type ThemeColors = keyof Theme['colors'];
