@@ -14,7 +14,7 @@ O Nubble App oferece as seguintes funcionalidades:
 
 ## App Screenshots
 
-<img src="./src/screenShots/screenshotLoginScreen.png" width="320px" height="608px">
+<img src="./src/screenShots/screenshotLoginScreen.png" width="320px" height="608px" text-align="center">
 <img src="./src/screenShots/screenshotSignInScreen.png" width="320px" height="608px">
 <img src="./src/screenShots/screenshotHomeScreen.png" width="320px" height="608px">
 <img src="./src/screenShots/screenshotPostCommentScreen.png" width="320px" height="608px">
