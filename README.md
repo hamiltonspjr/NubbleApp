@@ -1,6 +1,6 @@
 # Nubble App
 
-Nubble App é um projeto desenvolvido no curso da Coffstack que consiste em aplicativo de rede social desenvolvido com React Native, TypeScript, React Native CLI e @shopify/restyle. O objetivo é fornecer aos usuários uma plataforma envolvente para conectar e compartilhar suas experiências por meio de uma interface de usuário familiar e intuitiva.
+Nubble App é um projeto criado no curso da Coffstack que consiste em aplicativo de rede social desenvolvido com React Native, TypeScript, React Native CLI e @shopify/restyle. O objetivo é fornecer aos usuários uma plataforma envolvente para conectar e compartilhar suas experiências por meio de uma interface de usuário familiar e intuitiva.
 
 ## Funcionalidades
 
